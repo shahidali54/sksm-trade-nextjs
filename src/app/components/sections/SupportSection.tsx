@@ -50,6 +50,7 @@ const SupportSection = () => {
                     height={80}
                     className="w-full h-full object-cover"
                     priority={index === 0}
+                    // loading="lazy"
                   />
                 </div>
                 <h3 className="text-lg sm:text-xl text-white font-bold mb-1 sm:mb-2">{agent.name}</h3>
