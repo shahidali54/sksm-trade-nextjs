@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from "react";
+import { useState } from "react";
+import Link from "next/link";
 import { FaXTwitter, FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa6";
 
 const Footer = () => {
@@ -36,18 +37,18 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Quick Links</h4>
             <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-              <li><a href="#plans" className="hover:text-cyan-400 transition-colors">Trading Plans</a></li>
-              <li><a href="#how-it-works" className="hover:text-cyan-400 transition-colors">How It Works</a></li>
-              <li><a href="#news" className="hover:text-cyan-400 transition-colors">Market News</a></li>
-              <li><a href="#support" className="hover:text-cyan-400 transition-colors">Expert Support</a></li>
+              <li><Link href="#plans" className="hover:text-cyan-400 transition-colors">Trading Plans</Link></li>
+              <li><Link href="#how-it-works" className="hover:text-cyan-400 transition-colors">How It Works</Link></li>
+              <li><Link href="#news" className="hover:text-cyan-400 transition-colors">Market News</Link></li>
+              <li><Link href="#support" className="hover:text-cyan-400 transition-colors">Expert Support</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Legal</h4>
             <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-              <li><a href="#" className="hover:text-cyan-400 transition-colors">Terms of Use</a></li>
-              <li><a href="#" className="hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-cyan-400 transition-colors">Contact</a></li>
+              <li><Link href="#" className="hover:text-cyan-400 transition-colors">Terms of Use</Link></li>
+              <li><Link href="#" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link></li>
+              <li><Link href="#" className="hover:text-cyan-400 transition-colors">Contact</Link></li>
             </ul>
           </div>
           <div>
@@ -72,7 +73,7 @@ const Footer = () => {
             <div className="mt-4 sm:mt-6">
               <h5 className="text-white font-medium mb-2 sm:mb-3 text-sm sm:text-base">Follow Us</h5>
               <div className="flex space-x-3 sm:space-x-4">
-                <a 
+                <Link 
                   href="https://x.com/shahid_ali_0" 
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -80,8 +81,8 @@ const Footer = () => {
                   aria-label="Follow us on X (Twitter)"
                 >
                   <FaXTwitter className="h-4 w-4 sm:h-5 sm:w-5" />
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="https://www.facebook.com/shahid.mazari2" 
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -89,8 +90,8 @@ const Footer = () => {
                   aria-label="Follow us on Facebook"
                 >
                   <FaFacebook className="h-4 w-4 sm:h-5 sm:w-5" />
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="https://www.linkedin.com/in/shahid-ali-64676a2ba/" 
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -98,8 +99,8 @@ const Footer = () => {
                   aria-label="Follow us on LinkedIn"
                 >
                   <FaLinkedin className="h-4 w-4 sm:h-5 sm:w-5" />
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="https://github.com/shahidali54/" 
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -107,7 +108,7 @@ const Footer = () => {
                   aria-label="Follow us on GitHub"
                 >
                   <FaGithub className="h-4 w-4 sm:h-5 sm:w-5" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
