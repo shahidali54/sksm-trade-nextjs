@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from "react";
+import { useState } from "react";
+import Link from "next/link";
 
 const NewsSection = () => {
   // State to manage active news tab (crypto or forex)
@@ -158,7 +159,7 @@ const NewsSection = () => {
               </div>
               <div>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">{news.summary}</p>
-                <a 
+                <Link 
                   href={news.url} 
                   className="text-white hover:text-cyan-400 transition-colors p-0 cursor-pointer inline-flex items-center text-sm sm:text-base"
                 >
@@ -166,7 +167,7 @@ const NewsSection = () => {
                   <svg className="ml-2 h-3 w-3 sm:h-4 sm:w-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
