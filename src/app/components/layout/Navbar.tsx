@@ -13,6 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-blue-500/20">
+      
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Left side - Logo */}
         <Link href="#hero" className="flex items-center space-x-2 hover:scale-105 transition-transform duration-200">
@@ -23,9 +24,9 @@ const Navbar = () => {
         </Link>
         
         {/* Center - Welcome Text */}
-        <div className="hidden lg:flex items-center">
+        {/* <div className="hidden lg:flex items-center">
           <span className="text-white text-sm lg:text-base">Welcome to SKSM Trade!</span>
-        </div>
+        </div> */}
         
         {/* Right side - Navigation Links */}
         <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
