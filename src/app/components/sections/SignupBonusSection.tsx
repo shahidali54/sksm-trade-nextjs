@@ -1,7 +1,5 @@
 'use client';
 
-import React from "react";
-
 const SignupBonusSection = () => {
   return (
     <section className="py-12 sm:py-16 px-4 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
