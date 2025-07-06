@@ -99,5 +99,23 @@ All colors MUST be HSL.
 
   body {
     @apply bg-white text-gray-900;
+    /* Prevent layout shifts and smooth scrolling */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  /* Prevent layout shifts from fixed elements */
+  html {
+    scroll-padding-top: 80px; /* Adjust based on your navbar height */
+  }
+
+  /* Smooth transitions for all elements */
+  * {
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Prevent zoom on input focus (iOS) */
+  input, textarea, select {
+    font-size: 16px;
   }
 }
