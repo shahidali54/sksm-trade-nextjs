@@ -1,6 +1,5 @@
 'use client';
 
-import React from "react";
 import Link from "next/link";
 
 const NotFound = () => {
@@ -11,7 +10,7 @@ const NotFound = () => {
           <div className="text-8xl font-bold text-cyan-400 mb-4">404</div>
           <h1 className="text-3xl font-bold text-white mb-4">Page Not Found</h1>
           <p className="text-gray-300 mb-8">
-            Oops! The page you're looking for doesn't exist. It might have been moved or deleted.
+            Oops! The page you&apos;re looking for doesn&apos;t exist. It might have been moved or deleted.
           </p>
         </div>
         
