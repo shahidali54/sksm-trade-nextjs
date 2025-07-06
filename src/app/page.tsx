@@ -1,3 +1,5 @@
+// This is root page of the application
+
 'use client';
 import Navbar from "@/app/components/layout/Navbar";
 import HeroSection from "@/app/components/sections/HeroSection";
