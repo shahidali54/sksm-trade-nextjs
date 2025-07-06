@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from "react";
+import { useState } from "react";
+import Image from "next/image";
 
 const Testimonials = () => {
   const [activeTab, setActiveTab] = useState("all");
@@ -152,10 +153,13 @@ const Testimonials = () => {
                 <div className="flex items-start justify-between mb-3 sm:mb-4">
                   <div className="flex items-center space-x-2 sm:space-x-3">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden">
-                      <img 
+                      <Image 
                         src={testimonial.avatar} 
                         alt={testimonial.name}
+                        width={48}
+                        height={48}
                         className="w-full h-full object-cover"
+                        priority={testimonial.id <= 3}
                       />
                     </div>
                     <div>
@@ -170,7 +174,7 @@ const Testimonials = () => {
 
                 {/* Review */}
                 <p className="text-gray-300 mb-3 sm:mb-4 text-xs sm:text-sm leading-relaxed">
-                  "{testimonial.review}"
+                  &ldquo;{testimonial.review}&rdquo;
                 </p>
 
                 {/* Stats */}
