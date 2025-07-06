@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="pt-20 sm:pt-24 pb-16 sm:pb-20 px-4 relative overflow-hidden min-h-[70vh] md:min-h-screen">
+    <section id="hero" className="pt-20 sm:pt-24 pb-16 sm:pb-20 px-4 relative overflow-hidden flex flex-col justify-center min-h-[100vh] md:min-h-[100vh] lg:min-h-screen">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
