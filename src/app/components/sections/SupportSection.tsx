@@ -1,6 +1,5 @@
 'use client';
 
-import React from "react";
 import Image from "next/image";
 
 const SupportSection = () => {
@@ -39,7 +38,6 @@ const SupportSection = () => {
             Our professional analysts are always available to guide your trading decisions
           </p>
         </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
           {agents.map((agent, index) => (
             <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 rounded-lg p-4 sm:p-6">
@@ -51,6 +49,7 @@ const SupportSection = () => {
                     width={80}
                     height={80}
                     className="w-full h-full object-cover"
+                    priority={index === 0}
                   />
                 </div>
                 <h3 className="text-lg sm:text-xl text-white font-bold mb-1 sm:mb-2">{agent.name}</h3>
