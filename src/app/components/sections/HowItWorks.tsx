@@ -1,6 +1,6 @@
 'use client';
 
-import React from "react";
+import Link from "next/link";
 
 const HowItWorks = () => {
   const steps = [
@@ -133,20 +133,20 @@ const HowItWorks = () => {
               Join thousands of successful traders who trust our signals for consistent profits
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <a 
+              <Link 
                 href="#hero"
                 onClick={scrollToHero}
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg transition-all duration-300 transform hover:scale-105 cursor-pointer inline-block text-sm sm:text-base"
               >
                 Get Started Now
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="#plans"
                 onClick={scrollToPlans}
                 className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-6 sm:px-8 py-2 sm:py-3 rounded-lg transition-all duration-300 cursor-pointer inline-block text-sm sm:text-base"
               >
                 View Plans
-              </a>
+              </Link>
             </div>
           </div>
         </div>
