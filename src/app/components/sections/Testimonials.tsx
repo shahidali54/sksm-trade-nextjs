@@ -159,7 +159,8 @@ const Testimonials = () => {
                         width={48}
                         height={48}
                         className="w-full h-full object-cover"
-                        priority={testimonial.id <= 3}
+                        // priority={testimonial.id <= 3}
+                        loading="lazy"
                       />
                     </div>
                     <div>
