@@ -11,8 +11,6 @@ const Footer = () => {
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
-      // Here you can add your email subscription logic
-      // For now, we'll just show a success message
       setIsSubscribed(true);
       setEmail("");
       setTimeout(() => setIsSubscribed(false), 3000);
@@ -20,7 +18,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-800 py-12 px-4">
+    <footer className="bg-slate-900 text-gray-300 border-t border-slate-800 py-12 px-4">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8 mb-8">
           <div className="sm:col-span-2 lg:col-span-1">
@@ -48,78 +46,29 @@ const Footer = () => {
             <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
               <li><Link href="#" className="hover:text-cyan-400 transition-colors">Terms of Use</Link></li>
               <li><Link href="#" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link></li>
-              <li><Link href="#" className="hover:text-cyan-400 transition-colors">Contact</Link></li>
+              <li><Link href="#contact" className="hover:text-cyan-400 transition-colors">Contact</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Connect</h4>
-            <div className="space-y-1 sm:space-y-2">
-              <button className="text-cyan-400 hover:text-cyan-300 transition-colors p-0 h-auto text-sm sm:text-base">
-                Join Telegram Group
-              </button>
+            <div className="space-y-1 sm:space-y-2 mb-4">
+              <div className="text-gray-300">Join Telegram Group</div>
+              <div className="text-gray-300">Join Facebook Group</div>
+              <div className="text-gray-300">Join Whatsapp Group</div>
             </div>
-            <div className="space-y-1 sm:space-y-2">
-              <button className="text-cyan-400 hover:text-cyan-300 transition-colors p-0 h-auto text-sm sm:text-base">
-                Join Facebook Group
-              </button>
-            </div>
-            <div className="space-y-1 sm:space-y-2">
-              <button className="text-cyan-400 hover:text-cyan-300 transition-colors p-0 h-auto text-sm sm:text-base">
-                Join Whatsapp Group
-              </button>
-            </div>
-            
-            {/* Social Media Icons */}
-            <div className="mt-4 sm:mt-6">
-              <h5 className="text-white font-medium mb-2 sm:mb-3 text-sm sm:text-base">Follow Us</h5>
-              <div className="flex space-x-3 sm:space-x-4">
-                <Link 
-                  href="https://x.com/shahid_ali_0" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
-                  aria-label="Follow us on X (Twitter)"
-                >
-                  <FaXTwitter className="h-4 w-4 sm:h-5 sm:w-5" />
-                </Link>
-                <Link 
-                  href="https://www.facebook.com/shahid.mazari2" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
-                  aria-label="Follow us on Facebook"
-                >
-                  <FaFacebook className="h-4 w-4 sm:h-5 sm:w-5" />
-                </Link>
-                <Link 
-                  href="https://www.linkedin.com/in/shahid-ali-64676a2ba/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
-                  aria-label="Follow us on LinkedIn"
-                >
-                  <FaLinkedin className="h-4 w-4 sm:h-5 sm:w-5" />
-                </Link>
-                <Link 
-                  href="https://github.com/shahidali54/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                  aria-label="Follow us on GitHub"
-                >
-                  <FaGithub className="h-4 w-4 sm:h-5 sm:w-5" />
-                </Link>
-              </div>
+            <h5 className="text-white font-semibold mb-2 text-sm sm:text-base">Follow Us</h5>
+            <div className="flex space-x-3 sm:space-x-4 mt-2">
+              <Link href="https://x.com/shahid_ali_0" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors" aria-label="X (Twitter)"><FaXTwitter className="h-5 w-5 sm:h-6 sm:w-6" /></Link>
+              <Link href="https://www.linkedin.com/in/shahid-ali-64676a2ba/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors" aria-label="LinkedIn"><FaLinkedin className="h-5 w-5 sm:h-6 sm:w-6" /></Link>
+              <Link href="https://www.facebook.com/shahid.mazari2" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors" aria-label="Facebook"><FaFacebook className="h-5 w-5 sm:h-6 sm:w-6" /></Link>
+              <Link href="https://github.com/shahidali54/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors" aria-label="GitHub"><FaGithub className="h-5 w-5 sm:h-6 sm:w-6" /></Link>
             </div>
           </div>
-          
-          {/* Newsletter Subscription - Integrated */}
           <div className="sm:col-span-2 lg:col-span-1">
             <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Stay Updated</h4>
             <p className="text-gray-400 mb-3 sm:mb-4 text-xs sm:text-sm">
               Get latest trading signals & market insights.
             </p>
-            
             {isSubscribed ? (
               <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-2 text-green-400 text-xs">
                 ✅ Successfully subscribed!
@@ -148,7 +97,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-slate-800 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 SKSM Trade. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} SKSM Trade. All rights reserved.</p>
         </div>
       </div>
     </footer>
