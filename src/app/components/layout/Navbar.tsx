@@ -4,6 +4,16 @@ import { useState } from "react";
 import Link from "next/link";
 import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 
+const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+  if (targetId.startsWith('#')) {
+    e.preventDefault();
+    const el = document.getElementById(targetId.replace('#', ''));
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+};
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -30,11 +40,11 @@ const Navbar = () => {
         
         {/* Right side - Navigation Links */}
         <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
-          <Link href="#plans" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm lg:text-base">Plans</Link>
-          <Link href="#performance" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm lg:text-base">Performance</Link>
-          <Link href="#news" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm lg:text-base">News</Link>
-          <Link href="#support" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm lg:text-base">Support</Link>
-          <Link href="#testimonials" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm lg:text-base">Reviews</Link>
+          <Link href="#plans" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm lg:text-base" onClick={e => handleSmoothScroll(e, '#plans')}>Plans</Link>
+          <Link href="#performance" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm lg:text-base" onClick={e => handleSmoothScroll(e, '#performance')}>Performance</Link>
+          <Link href="#news" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm lg:text-base" onClick={e => handleSmoothScroll(e, '#news')}>News</Link>
+          <Link href="#support" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm lg:text-base" onClick={e => handleSmoothScroll(e, '#support')}>Support</Link>
+          <Link href="#testimonials" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm lg:text-base" onClick={e => handleSmoothScroll(e, '#testimonials')}>Reviews</Link>
           
           {/* Clerk Auth Buttons */}
           <div className="flex items-center space-x-3 ml-4">
@@ -87,35 +97,35 @@ const Navbar = () => {
             <Link 
               href="#plans" 
               className="block text-gray-300 hover:text-cyan-400 transition-colors py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={e => { handleSmoothScroll(e, '#plans'); setIsMobileMenuOpen(false); }}
             >
               Plans
             </Link>
             <Link 
               href="#performance" 
               className="block text-gray-300 hover:text-cyan-400 transition-colors py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={e => { handleSmoothScroll(e, '#performance'); setIsMobileMenuOpen(false); }}
             >
               Performance
             </Link>
             <Link 
               href="#news" 
               className="block text-gray-300 hover:text-cyan-400 transition-colors py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={e => { handleSmoothScroll(e, '#news'); setIsMobileMenuOpen(false); }}
             >
               News
             </Link>
             <Link 
               href="#support" 
               className="block text-gray-300 hover:text-cyan-400 transition-colors py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={e => { handleSmoothScroll(e, '#support'); setIsMobileMenuOpen(false); }}
             >
               Support
             </Link>
             <Link 
               href="#testimonials" 
               className="block text-gray-300 hover:text-cyan-400 transition-colors py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={e => { handleSmoothScroll(e, '#testimonials'); setIsMobileMenuOpen(false); }}
             >
               Reviews
             </Link>
